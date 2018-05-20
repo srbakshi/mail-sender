@@ -1,4 +1,12 @@
 # mail-sender
+
+**Please change external mail service url/apikeys by modifying properties in:**
+Note: Email recipients need to be authorized in https://app.mailgun.com/app/account/authorized
+```
+mail-sender/src/main/resources/app.properties
+```
+
+
 To compile and package into a war file target/mail-sender.war:
 ```
 mvn clean package
@@ -13,12 +21,8 @@ curl -X POST \
   http://localhost:9090/mail/send \
   -H 'Cache-Control: no-cache' \
   -H 'Content-Type: application/json' \
-  -d '{"from":"sbakshi@gmail.com","to":"srbakshi@gmail.com","subject":"This is the subject", "text":"This is the email body"}'
+  -d '{"from":"sbakshi@gmail.com","to":"srbakshi@gmail.com,anotheremail@gmail.com","subject":"This is the subject", "text":"This is the email body"}'
  ```
-To change external mail service url/apikeys, modify properties in:
-```
-mail-sender/src/main/resources/app.properties
-```
 
 External libraries used:
 ```
