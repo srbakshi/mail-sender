@@ -1,11 +1,10 @@
 # mail-sender
 
 **Please change external mail service url/apikeys by modifying properties in:**
-Note: Email recipients need to be authorized in https://app.mailgun.com/app/account/authorized
 ```
 mail-sender/src/main/resources/app.properties
 ```
-
+_Note: Email recipients need to be authorized in https://app.mailgun.com/app/account/authorized_
 
 To compile and package into a war file target/mail-sender.war:
 ```
